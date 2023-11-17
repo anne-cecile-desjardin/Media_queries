@@ -1,0 +1,109 @@
+
+body {
+    width: 100vw;  /*vh  view widht*/
+    height: 100vh; /*vh  view height*/
+    background-image: url(photo/1200x768_colline-martienne-santa-cruz-photographiee-29-avril-2021-rover-perseverance-mars-nasa.webp);
+    background-size: cover;
+}
+nav 
+{
+    margin: 100px auto;
+    width: 50%;
+    height: 100px;
+    background-image: url(photo/MarsPerseverance.webp);
+}
+ 
+nav .main_pages 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+nav .main_pages a 
+{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    color:rgb(41, 6, 41);
+}
+ 
+nav a:hover 
+{
+    background:	rgb(253,232,187);
+    filter: blur(0.1em);
+}
+label
+{
+    display: none;
+}
+ 
+@media all and (max-width:767px) {
+    nav
+    {
+        height: 60px;
+    }
+ 
+    nav .main_pages 
+    {
+        display: none;
+    }
+ 
+    label 
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color:rgb(41, 6, 41);
+        cursor: pointer;
+    }
+}
+label, #toggle
+{
+    display: none;
+}
+ 
+@media all and (max-width: 767px)
+{
+    nav
+    {
+        height: 60px;
+    }
+ 
+    nav .main_pages 
+    {
+        display: none;
+        flex-direction: column;
+        background: transparent;
+        height: 220px;
+    }
+ 
+    nav .main_pages a {
+        width: 50%;
+    }
+ 
+    label 
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color:rgb(41, 6, 41);
+        font-weight: bolder;
+        cursor: pointer;
+        
+    }
+ 
+    #toggle:checked + .main_pages {
+        display: flex;
+    }
+}
